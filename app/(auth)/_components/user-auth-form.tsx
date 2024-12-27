@@ -53,23 +53,23 @@ export default function UserAuthForm() {
       try {
         // ==============================================================================
         // 1. 调用本地 /api/user 路由，而不是直接请求 http://118.138.238.1:3000
-        const response = await fetch('/api/user', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            email: data.email,
-            password: data.password,
-            isLogin // 如果需要在后台区分 "登录"或"注册"，可传此值
-          })
-        });
+        // const response = await fetch('/api/user', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({
+        //     email: data.email,
+        //     password: data.password,
+        //     isLogin // 如果需要在后台区分 "登录"或"注册"，可传此值
+        //   })
+        // });
 
-        const resData = await response.json();
+        // const resData = await response.json();
 
-        if (!resData.success) {
-          throw new Error(resData.message || 'Backend error');
-        }
-        // 这里拿到了后端返回的 data: resData.data
-        console.log('Data from /api/user =>', resData.data);
+        // if (!resData.success) {
+        //   throw new Error(resData.message || 'Backend error');
+        // }
+        // // 这里拿到了后端返回的 data: resData.data
+        // console.log('Data from /api/user =>', resData.data);
         // ==============================================================================
 
         // 2. 当上面调用成功后，可以继续使用原有的 NextAuth signIn 逻辑
