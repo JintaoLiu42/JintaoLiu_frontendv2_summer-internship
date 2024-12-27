@@ -75,7 +75,7 @@ export default function UserAuthForm() {
         // 2. 当上面调用成功后，可以继续使用原有的 NextAuth signIn 逻辑
         await signIn('credentials', {
           email: data.email,
-          callbackUrl: '/dashboard'
+          callbackUrl: callbackUrl ?? '/dashboard'
         });
 
         // 3. 根据 isLogin 显示不同的提示
