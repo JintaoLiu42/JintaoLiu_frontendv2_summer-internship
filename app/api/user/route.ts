@@ -42,7 +42,11 @@ export async function POST(req: Request) {
       body: JSON.stringify(payload)
     });
     if (!res.ok) {
-      throw new Error(`Failed request, status: ${res.status}`);
+      const errorBody = await res.text(); // 读取错误的响应体
+      console.error('Error response body:', errorBody);
+      throw new Error(
+        `Failed request, status: ${res.status}, body: ${errorBody}`
+      );
     }
     // 解析后端返回结果
     const result = await res.json();

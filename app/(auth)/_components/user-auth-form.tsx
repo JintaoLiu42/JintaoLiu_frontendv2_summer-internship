@@ -23,7 +23,7 @@ const formSchema = z.object({
   email: z.string().email({ message: 'Enter a valid email address' }),
   password: z
     .string()
-    .min(8, { message: 'Password length cannot be less than 8' })
+    .min(1, { message: 'Password length cannot be less than 8' })
 });
 
 type UserFormValue = z.infer<typeof formSchema>;
@@ -51,6 +51,7 @@ export default function UserAuthForm() {
   const onSubmit = async (data: UserFormValue) => {
     startTransition(async () => {
       try {
+        // ==============================================================================
         // 1. 调用本地 /api/user 路由，而不是直接请求 http://118.138.238.1:3000
         const response = await fetch('/api/user', {
           method: 'POST',
@@ -69,11 +70,12 @@ export default function UserAuthForm() {
         }
         // 这里拿到了后端返回的 data: resData.data
         console.log('Data from /api/user =>', resData.data);
+        // ==============================================================================
 
         // 2. 当上面调用成功后，可以继续使用原有的 NextAuth signIn 逻辑
         await signIn('credentials', {
           email: data.email,
-          callbackUrl: callbackUrl ?? '/dashboard'
+          callbackUrl: '/dashboard'
         });
 
         // 3. 根据 isLogin 显示不同的提示
