@@ -8,31 +8,35 @@ export async function POST(req: Request) {
 
     // 2. 构造要发送到后端的 payload
     const payload = {
-      ts: [], // 如需固定四个字符串可自行添加
+      ts: [0],
       comm_spec: {
-        comm_init_type: '', // g:gateway, b:board, s:service
-        src_id: '', // unique_id
-        user_id: email, // 同 email
-        protocol: ['oauth', 'jwt'], // 示例：长度为2
+        comm_init_type: 'string',
+        src_id: 'string',
+        user_id: 'string',
+        protocol: {
+          type: 'string',
+          token: 'string'
+        },
         seq_num: 0
       },
-      msg_type: '',
-      msg_sub_type: '-1',
+      msg_type: 'string',
+      msg_sub_type: '',
       body: {
         user_id: email,
-        name: '',
+        name: 'John Doe',
         email: email,
         password: password,
-        phone: '',
-        gender: '',
-        'date of birth': '',
-        'profile image': '',
-        address: ''
+        phone: '+12345678901',
+        gender: 'Male',
+        date_of_birth: '2000-01-01',
+        profile_image: 'https://example.com/image.jpg',
+        address: '123 Main Street, City, Country'
       }
     };
+    console.log('38 payload test:', payload);
 
     // 3. 请求后端
-    const res = await fetch('http://118.138.238.1:3000', {
+    const res = await fetch('http://118.138.238.1:3000/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)

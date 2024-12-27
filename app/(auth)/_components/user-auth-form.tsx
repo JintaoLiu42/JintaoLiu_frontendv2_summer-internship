@@ -21,7 +21,9 @@ import GithubSignInButton from './github-auth-button';
 // 1. 为了拿到 password，需要在 zod schema 中添加
 const formSchema = z.object({
   email: z.string().email({ message: 'Enter a valid email address' }),
-  password: z.string().min(1, { message: 'Password cannot be empty' })
+  password: z
+    .string()
+    .min(8, { message: 'Password length cannot be less than 8' })
 });
 
 type UserFormValue = z.infer<typeof formSchema>;
