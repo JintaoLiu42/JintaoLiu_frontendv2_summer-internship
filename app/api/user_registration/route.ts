@@ -23,14 +23,14 @@ export async function POST(req: Request) {
       msg_sub_type: '',
       body: {
         user_id: email,
-        name: 'John Doe',
+        name: 'User',
         email: email,
         password: password,
         phone: '+12345678901',
-        gender: 'Male',
+        gender: '',
         date_of_birth: '2000-01-01',
-        profile_image: 'https://example.com/image.jpg',
-        address: '123 Main Street, City, Country'
+        profile_image: '',
+        address: ''
       }
     };
     console.log('38 payload test:', payload);
