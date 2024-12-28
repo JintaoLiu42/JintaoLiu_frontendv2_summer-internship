@@ -51,8 +51,8 @@ export default function ScrollAreaHorizontalDemo() {
   return (
     <div>
       {/* 第一行 ScrollArea */}
-      <ScrollArea className="w-5/6 whitespace-nowrap rounded-md border mx-12">
-        <div className="flex justify-center w-max space-x-4 p-3">
+      <ScrollArea className="w-5/6 whitespace-nowrap rounded-md border mx-auto">
+        <div className="flex justify-center w-full space-x-4 p-3">
           {works.map((artwork, idx) => (
             <figure key={`${artwork.artist}-${idx}`} className="shrink-0">
               <div className="overflow-hidden rounded-md">
@@ -77,8 +77,8 @@ export default function ScrollAreaHorizontalDemo() {
       </ScrollArea>
 
       {/* 第二行 ScrollArea */}
-      <ScrollArea className="w-5/6 whitespace-nowrap rounded-md border mx-12">
-        <div className="flex justify-center w-max space-x-4 p-4">
+      <ScrollArea className="w-5/6 whitespace-nowrap rounded-md border mx-auto">
+        <div className="flex justify-center w-full space-x-4 p-4">
           {works.map((artwork, idx) => (
             <figure key={`${artwork.artist}-${idx}`} className="shrink-0">
               <div className="overflow-hidden rounded-md">
@@ -103,8 +103,8 @@ export default function ScrollAreaHorizontalDemo() {
       </ScrollArea>
 
       {/* 第三行 ScrollArea */}
-      <ScrollArea className="w-5/6 whitespace-nowrap rounded-md border mx-12">
-        <div className="flex justify-center w-max space-x-4 p-4">
+      <ScrollArea className="w-5/6 whitespace-nowrap rounded-md border mx-auto">
+        <div className="flex justify-center w-full space-x-4 p-4">
           {works.map((artwork, idx) => (
             <figure key={`${artwork.artist}-${idx}`} className="shrink-0">
               <div className="overflow-hidden rounded-md">
