@@ -54,7 +54,7 @@ export default function UserAuthForm() {
       try {
         // ==============================================================================
         // 1. 调用本地 /api/user 路由，而不是直接请求 http://118.138.238.1:3000
-        const response = await fetch('/api/user_registration', {
+        const response = await fetch('/api/user_auth', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
