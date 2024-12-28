@@ -68,6 +68,7 @@ export async function POST(req: Request) {
 
     // 解析后端返回结果
     const result = await res.json();
+    console.log('Backend Result:', result)
 
     // 4. 返回给前端
     return NextResponse.json({

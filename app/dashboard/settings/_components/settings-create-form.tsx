@@ -33,7 +33,7 @@ export default function SettingsComponent() {
       </div>
 
       {/** 导航栏：新增了“Accessibility”、“General” */}
-      <div className="mx-auto grid w-full max-w-6xl items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
+      <div className="mx-auto grid w-full max-w-6xl items-start gap-6 md:grid-cols-[100px_1fr] lg:grid-cols-[150px_1fr]">
         <nav className="grid gap-4 text-sm text-gray-500 dark:text-gray-400">
           <a
             href="#account"
@@ -73,6 +73,10 @@ export default function SettingsComponent() {
                     defaultValue="johndoe"
                   />
                 </div>
+                {/** 在右下角添加 Confirm 按钮 */}
+                <div className="flex justify-end mt-4">
+                  <Button>Confirm</Button>
+                </div>
               </CardContent>
             </Card>
 
@@ -90,6 +94,10 @@ export default function SettingsComponent() {
                     placeholder="Enter your email"
                     defaultValue="johndoe@example.com"
                   />
+                </div>
+                {/** 在右下角添加 Confirm 按钮 */}
+                <div className="flex justify-end mt-4">
+                  <Button>Confirm</Button>
                 </div>
               </CardContent>
             </Card>
@@ -111,6 +119,10 @@ export default function SettingsComponent() {
                     type="password"
                     placeholder="Confirm your new password"
                   />
+                </div>
+                {/** 在右下角添加 Confirm 按钮 */}
+                <div className="flex justify-end mt-4">
+                  <Button>Confirm</Button>
                 </div>
               </CardContent>
             </Card>
@@ -297,35 +309,6 @@ export default function SettingsComponent() {
                 Customize the visual appearance of the application.
               </p>
             </div>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Theme</CardTitle>
-                <CardDescription>
-                  Select the color theme for the application.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center justify-between space-x-2">
-                  <Label htmlFor="theme" className="flex flex-col space-y-1">
-                    <span>Theme</span>
-                    <span className="font-normal leading-snug text-gray-500 dark:text-gray-400">
-                      Choose the color theme for the application.
-                    </span>
-                  </Label>
-                  <Select defaultValue="system">
-                    <SelectTrigger className="w-[180px]">
-                      <SelectValue placeholder="Select theme" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="light">Light</SelectItem>
-                      <SelectItem value="dark">Dark</SelectItem>
-                      <SelectItem value="system">System</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </CardContent>
-            </Card>
 
             <Card>
               <CardHeader>
@@ -717,9 +700,9 @@ export default function SettingsComponent() {
         </div>
       </div>
 
-      <div className="mx-auto mt-6 flex w-full max-w-6xl justify-end">
+      {/* <div className="mx-auto mt-6 flex w-full max-w-6xl justify-end">
         <Button>Save Changes</Button>
-      </div>
+      </div> */}
     </main>
   );
 }

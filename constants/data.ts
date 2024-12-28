@@ -175,15 +175,45 @@ export const navItems: NavItem[] = [
 
     items: [
       {
-        title: 'Settings',
-        url: '/dashboard/settings',
+        title: 'Account',
+        url: '/dashboard/settings#account',
         icon: 'userPen',
         shortcut: ['m', 'm']
       },
       {
-        title: 'Account',
+        title: 'Notifications',
         shortcut: ['l', 'l'],
-        url: '/',
+        url: '/dashboard/settings#notifications',
+        icon: 'login'
+      },
+      {
+        title: 'Appearance',
+        shortcut: ['l', 'l'],
+        url: '/dashboard/settings#appearance',
+        icon: 'login'
+      },
+      {
+        title: 'Privacy',
+        shortcut: ['l', 'l'],
+        url: '/dashboard/settings#privacy',
+        icon: 'login'
+      },
+      {
+        title: 'Security',
+        shortcut: ['l', 'l'],
+        url: '/dashboard/settings#security',
+        icon: 'login'
+      },
+      {
+        title: 'Accessibility',
+        shortcut: ['l', 'l'],
+        url: '/dashboard/settings#accessibility',
+        icon: 'login'
+      },
+      {
+        title: 'General',
+        shortcut: ['l', 'l'],
+        url: '/dashboard/settings#general',
         icon: 'login'
       }
     ]
