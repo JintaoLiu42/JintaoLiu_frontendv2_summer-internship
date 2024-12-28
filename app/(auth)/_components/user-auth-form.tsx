@@ -17,6 +17,7 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import * as z from 'zod';
 import GithubSignInButton from './github-auth-button';
+import GoogleSignInButton from './google-auth-button';
 
 // 1. 为了拿到 password，需要在 zod schema 中添加
 const formSchema = z.object({
@@ -157,8 +158,11 @@ export default function UserAuthForm() {
         </div>
       </div>
 
-      {/* 其他登录方式：GitHub */}
-      <GithubSignInButton />
+      {/* 其他登录方式：左右分布 */}
+      <div className="flex w-full items-center justify-between space-x-2">
+        <GoogleSignInButton />
+        <GithubSignInButton />
+      </div>
 
       {/* 切换登录/注册模式 */}
       <div className="mt-2 text-center">

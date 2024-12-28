@@ -52,14 +52,17 @@ _If you are looking for a React admin dashboard starter, here is the [repo](http
 Follow these steps to clone the repository and start the development server:
 
 > [!NOTE]  
-> If you want to use the starter with  **Next 15** with **React 19**, follow these steps:
+> If you want to use the starter with **Next 15** with **React 19**, follow these steps:
+>
 > - Clone only the `next-15` branch:
 >   ```bash
 >   git clone --branch next-15 --single-branch https://github.com/Kiranism/next-shadcn-dashboard-starter.git
+>   ```
 
 - Clone the repo:
-```bash 
-git clone https://github.com/Kiranism/next-shadcn-dashboard-starter.git 
+
+```bash
+git clone https://github.com/Kiranism/next-shadcn-dashboard-starter.git
 ```
 
 - `npm install`
