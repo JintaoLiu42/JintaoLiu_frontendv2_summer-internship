@@ -11,4 +11,8 @@
 
 3. How to add new page?
    1. add new variable in /constants/data.ts "navItems"
-   
+   2. add path in navItems
+   3. build your page with /app/dashboard
+
+
+4. 

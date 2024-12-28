@@ -150,7 +150,7 @@ export const navItems: NavItem[] = [
     title: 'Account',
     url: '#', // Placeholder as there is no direct link for the parent
     icon: 'billing',
-    isActive: true,
+    isActive: false,
 
     items: [
       {
@@ -170,8 +170,8 @@ export const navItems: NavItem[] = [
   {
     title: 'Settings',
     url: '#', // Placeholder as there is no direct link for the parent
-    icon: 'billing',
-    isActive: true,
+    icon: 'settings',
+    isActive: false,
 
     items: [
       {
@@ -214,6 +214,57 @@ export const navItems: NavItem[] = [
         title: 'General',
         shortcut: ['l', 'l'],
         url: '/dashboard/settings#general',
+        icon: 'login'
+      }
+    ]
+  },
+  {
+    title: 'Message Centre',
+    url: '/dashboard',
+    icon: 'post',
+    shortcut: ['k', 'k'],
+    isActive: false,
+    items: [] // No child items
+  },
+  {
+    title: 'Help Centre',
+    url: '/dashboard',
+    icon: 'help',
+    shortcut: ['k', 'k'],
+    isActive: false,
+    items: [] // No child items
+  },
+  {
+    title: 'Network Diagnosis',
+    url: '/user2',
+    icon: 'laptop',
+    shortcut: ['k', 'k'],
+    isActive: false,
+    items: [] // No child items
+  },
+  {
+    title: 'About',
+    url: '#', // Placeholder as there is no direct link for the parent
+    icon: 'arrowRight',
+    isActive: false,
+
+    items: [
+      {
+        title: 'Version',
+        url: '/dashboard',
+        icon: 'userPen',
+        shortcut: ['m', 'm']
+      },
+      {
+        title: 'App Update',
+        shortcut: ['l', 'l'],
+        url: '/dashboard',
+        icon: 'login'
+      },
+      {
+        title: 'Policy',
+        shortcut: ['l', 'l'],
+        url: '/dashboard',
         icon: 'login'
       }
     ]
