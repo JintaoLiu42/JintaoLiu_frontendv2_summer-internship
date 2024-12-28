@@ -30,7 +30,7 @@ import {
   UserCircle2Icon,
   UserPen,
   UserX2Icon,
-  X
+  X,
 } from 'lucide-react';
 
 export type Icon = LucideIcon;
@@ -81,6 +81,31 @@ export const Icons = {
       ></path>
     </svg>
   ),
+  google: ({ ...props }: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 48 48"
+      role="img"
+      {...props}
+    >
+      <path
+        fill="#EA4335"
+        d="M24 9.5c3.1 0 5.3 1.3 6.6 2.4L35 8C32.1 5.6 28.5 4 24 4 14.6 4 6.8 9.4 3.3 17l7.9 6.1C13.4 16.8 18.3 9.5 24 9.5z"
+      />
+      <path
+        fill="#34A853"
+        d="M23.9 44c5.2 0 9.5-1.7 12.6-4.8l-7.9-6.1c-1.6 1.2-4 2-6.7 2-5.7 0-10.5-3.7-12.2-8.8L3.1 30.7C6.6 39.4 14.7 44 23.9 44z"
+      />
+      <path
+        fill="#4A90E2"
+        d="M43.6 20.8H42V20H24v8.3h11.4c-1.1 3-3.4 5.5-6.5 7.2l7.9 6.1c4.7-4.3 7.8-10.7 7.8-18.6 0-1.4-.2-2.8-.5-4.2z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M11.7 24c0-1.5.3-3 1-4.4L3.4 13.6C1.2 17.4 0 21.6 0 24s1.2 6.6 3.4 10.4l9.4-6.4c-.7-1.4-1.1-2.9-1.1-4.4z"
+      />
+    </svg>
+  ),
   twitter: Twitter,
-  check: Check
+  check: Check,
 };

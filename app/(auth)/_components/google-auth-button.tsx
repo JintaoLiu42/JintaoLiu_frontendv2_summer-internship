@@ -18,7 +18,7 @@ export default function GoogleSignInButton() {
         signIn('google', { callbackUrl: callbackUrl ?? '/dashboard' })
       }
     >
-      <Icons.gitHub className="mr-2 h-4 w-4" />
+      <Icons.google className="mr-2 h-4 w-4" />
       Google
     </Button>
   );
